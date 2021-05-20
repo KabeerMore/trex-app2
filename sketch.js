@@ -96,7 +96,7 @@ function draw() {
     
     if((touches.length > 0 || keyDown("SPACE")) && trex.y  >= height-120) {
       jumpSound.play( )
-      trex.velocityY = -10;
+      trex.velocityY = windowX;
        touches = [];
     }
     
@@ -132,7 +132,7 @@ function draw() {
     obstaclesGroup.setLifetimeEach(-1);
     cloudsGroup.setLifetimeEach(-1);
     
-    if(mousePressedOver(restart)) {
+    if(windowPressedOver(restart)) {
       reset();
     }
   }
